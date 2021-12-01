@@ -21,17 +21,20 @@
 <body>
     <header>
         <nav class="nav-bar">
-            <a href="index.html" class="logo">DinoTalk!</a>
+            <a href="{% url 'cursos:index' %}" class="logo">DinoTalk!</a>
             <div class="menu-btn">
                 <div class="menu-btn_burguer"></div>
             </div>
             <ul class="nav-menu">
-                <li class="nav-menu-item"><a class="nav-menu-link" href="index.html">Inicio</a></li>
-                <li class="nav-menu-item"><a class="nav-menu-link" href="#">Cursos</a></li>
-                <li class="nav-menu-item"><a class="nav-menu-link" href="#">Contacto</a></li>
+                <li class="nav-menu-item"><a class="nav-menu-link" href="{% url 'cursos:index' %}">Inicio</a></li>
+                <li class="nav-menu-item"><a class="nav-menu-link" href="{% url 'cursos:cursos' %}">Cursos</a></li>
+                <li class="nav-menu-item"><a class="nav-menu-link" href="{% url 'cursos:contacto' %}">Contacto</a></li>
             </ul>
         </nav>
     </header>
+    <main>
+        {% block main %} {% endblock main %}
+    </main>
 
     <footer>
         <img class="logo-footer" src="{% static 'images/dinotalk.png' %}" alt="logo-dinotalk">
@@ -41,7 +44,7 @@
             </div>
             <div>
                 <i class="fas fa-phone "></i>
-                <p>+54 9 11 5555 5555</p>
+                <a href="tel:+541155555555">+54 9 11 5555 5555</a>
             </div>
         </div>
         <div id="firma">
