@@ -1,0 +1,56 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#9CC254">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,600;1,200;1,300&family=Mulish:ital,wght@0,200;0,300;1,200;1,300;1,600&family=Titillium+Web:ital,wght@0,200;0,300;0,600;1,200;1,300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0cebf067a0.js" crossorigin="anonymous"></script>
+    <title>DinoTalk!</title>
+    <link rel="shortcut icon" href="{% static 'images/dinotalk-icon.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+
+<body>
+    <header>
+        <nav class="nav-bar">
+            <a href="index.html" class="logo">DinoTalk!</a>
+            <div class="menu-btn">
+                <div class="menu-btn_burguer"></div>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-menu-item"><a class="nav-menu-link" href="index.html">Inicio</a></li>
+                <li class="nav-menu-item"><a class="nav-menu-link" href="#">Cursos</a></li>
+                <li class="nav-menu-item"><a class="nav-menu-link" href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <footer>
+        <img class="logo-footer" src="{% static 'images/dinotalk.png' %}" alt="logo-dinotalk">
+        <div class="footer-contacto ">
+            <div><i class="fas fa-envelope "></i>
+                <a href="mailto:dinotalk@gmail.com">dinotalk@gmail.com</a>
+            </div>
+            <div>
+                <i class="fas fa-phone "></i>
+                <p>+54 9 11 5555 5555</p>
+            </div>
+        </div>
+        <div id="firma">
+            <p>Hecho con ❤️ by Solcii</p>
+            <a href="https://github.com/Solcii"><i id="github" class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/sol-micaela-potschka-506713130/"><i id="linkedin" class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>
