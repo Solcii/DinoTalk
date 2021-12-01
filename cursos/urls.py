@@ -5,6 +5,6 @@ from .views import contacto
 
 urlpatterns = [
     path('', home, name='index'),
-    path('cursos', cursos, name='cursos'),
-    path('contacto', contacto, name='contacto'),
+    path('cursos/', cursos, name='cursos'),
+    path('contacto/', contacto, name='contacto'),
 ]

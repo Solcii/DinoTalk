@@ -37,6 +37,7 @@ class Curso(models.Model):
     ]
     modalidad = models.CharField(max_length=1, choices=modalidades, default='P')
     profesor = models.ForeignKey(Profesor, null=False, blank=False, on_delete=models.CASCADE)
+    inscripciones_abiertas = models.BooleanField(default=True)
 
     class Meta:
         verbose_name = 'Curso'

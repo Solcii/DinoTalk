@@ -8,7 +8,8 @@ class ProfesorAdmin(admin.ModelAdmin):
 
 class CursoAdmin(admin.ModelAdmin):
     search_fields = ['titulo']
-    list_display = ('titulo', 'idioma', 'nivel', 'modalidad',)
+    list_display = ('titulo','idioma','nivel', 'modalidad',)
+    list_filter = ('idioma', 'nivel', 'modalidad','inscripciones_abiertas',)
 
 admin.site.register(Profesor, ProfesorAdmin)
 admin.site.register(Curso, CursoAdmin)
