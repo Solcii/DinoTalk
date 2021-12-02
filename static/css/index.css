@@ -41,3 +41,18 @@
     text-align: center;
     margin-top: 1rem;
 }
+
+@media (max-width: 768px) {
+    .grupo-cards-idiomas {
+        flex-wrap: wrap;
+    }
+    .card-idioma {
+        max-width: 45%;
+    }
+}
+
+@media (max-width: 576px) {
+    .titulo-index {
+        font-size: 2.5rem;
+    }
+}
