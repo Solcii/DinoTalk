@@ -1,3 +1,31 @@
-{% extends 'base.html' %} {% block main %}
-<h1>Descubre junto a Dino la oferta de cursos:</h1>
+{% extends 'base.html' %} {% load static %}
+
+<!-- Hoja de estilos de esta pagina -->
+{% block styles %} {% static 'css/index.css' %} {% endblock styles %}
+
+<!-- Contenido de esta pagina -->
+{% block main %}
+
+<section class="explorar-idiomas">
+    <h1 class="titulo-index">Descubre junto a Dino nuestra oferta de cursos</h1>
+    <div class="grupo-cards-idiomas">
+        <a class="card-idioma" href="{% url 'cursos:cursos' %}">
+            <img class="bandera-idioma" src="{% static 'images/flag-uk.png' %}" alt="Bandera UK">
+            <h2 class="titulo-idioma">Inglés</h2>
+        </a>
+        <a class="card-idioma" href="{% url 'cursos:cursos' %}">
+            <img class="bandera-idioma" src="{% static 'images/germany-flag.png' %}" alt="Bandera Alemania">
+            <h2 class="titulo-idioma">Alemán</h2>
+        </a>
+        <a class="card-idioma" href="{% url 'cursos:cursos' %}">
+            <img class="bandera-idioma" src="{% static 'images/french-flag.png' %}" alt="Bandera Francia">
+            <h2 class="titulo-idioma">Francés</h2>
+        </a>
+        <a class="card-idioma" href="{% url 'cursos:cursos' %}">
+            <img class="bandera-idioma" src="{% static 'images/portugal-flag.png' %}" alt="Bandera Portugal">
+            <h2 class="titulo-idioma">Portugués</h2>
+        </a>
+    </div>
+</section>
+
 {% endblock main %}
