@@ -1,3 +1,37 @@
-{% extends 'base.html' %}{% block main %}
-<p>Esto es en cursos</p>
+{% extends 'base.html' %} {% load static %}
+
+<!-- Hoja de estilos de esta pagina -->
+{% block styles %} {% static 'css/cursos.css' %} {% endblock styles %}
+
+<!-- Contenido de esta pagina -->
+{% block main %}
+<h1 class="titulo-seccion-cursos">Oferta de cursos</h1>
+<section class="oferta-cursos">
+    <div class="card-wrap">
+        <div class="card-curso">
+            <div class="card-front">
+                <div class="card-curso-header">
+                </div>
+                <div class="card-curso-contenido">
+                    <h2 class="titulo-curso">Taller de conversacion</h2>
+                    <h3 class="idioma">Frances intermedio</h3>
+                    <div class="footer-card-curso">
+                        <div class="modalidad">
+                            <i class="fas fa-desktop modalidad-icono"></i>
+                            <h2 class="modalidad-titulo">Virtual</h2>
+                        </div>
+                        <div class="duracion">
+                            <i class="far fa-calendar-alt duracion-icono"></i>
+                            <h2 class="duracion-titulo">20 dias</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-back">
+                <h2 class="inscripciones">Incripciones abiertas</h2>
+            </div>
+        </div>
+    </div>
+</section>
+
 {% endblock main %}

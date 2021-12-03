@@ -1,0 +1,102 @@
+.titulo-seccion-cursos {
+    text-align: center;
+    text-transform: uppercase;
+    color: #3b3b3b;
+    font-size: 3rem;
+    font-style: italic;
+    margin: 1rem 1rem 2rem;
+}
+
+.oferta-cursos {
+    display: flex;
+    justify-content: justify-content;
+}
+
+.card-wrap {
+    margin: 1rem;
+    -webkit-perspective: 800;
+    perspective: 800;
+    width: 20%;
+}
+
+.card-curso {
+    width: 100%;
+    height: 20rem;
+    background: #fafafa;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: .7s ease;
+    box-shadow: 0rem 1rem 1.5rem -0.5rem rgba(0, 0, 0, 0.65);
+    border-radius: 1rem;
+}
+
+.card-front,
+.card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-wrap:hover .card-curso {
+    transform: rotateY(180deg);
+}
+
+.card-curso-header {
+    height: 7rem;
+    background: linear-gradient(to right, rgb(85, 85, 228), white, rgb(228, 104, 104));
+    border-radius: 1rem 1rem 0 0;
+}
+
+.card-curso-contenido {
+    margin: 1.5rem;
+}
+
+.titulo-curso,
+.inscripciones {
+    font-size: 2.5rem;
+}
+
+.idioma {
+    font-size: 1.8rem;
+    font-weight: 200;
+    margin: 0.5rem 0 2rem;
+}
+
+.modalidad,
+.duracion {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.modalidad-titulo,
+.duracion-titulo {
+    font-size: 1.8rem;
+    font-weight: 200;
+    font-style: italic;
+    color: #575353;
+}
+
+.modalidad-icono,
+.duracion-icono {
+    font-size: 2rem;
+    margin-right: 1.5rem;
+    color: #575353
+}
+
+.footer-card-curso {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
