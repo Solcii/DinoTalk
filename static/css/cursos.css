@@ -58,11 +58,11 @@
 }
 
 .ingles {
-    background: linear-gradient(to top, rgb(85, 85, 228), #fff, rgb(228, 104, 104), #fff, rgb(85, 85, 228));
+    background: linear-gradient(to right, rgb(112, 112, 245), #fff, rgb(238, 157, 157), #fff, rgb(85, 85, 228));
 }
 
 .aleman {
-    background: linear-gradient(to top, #000, rgb(228, 104, 104), rgb(228, 218, 85));
+    background: linear-gradient(to bottom, rgb(70, 68, 68), rgb(241, 122, 122), rgb(247, 238, 115));
 }
 
 .frances {
@@ -70,7 +70,7 @@
 }
 
 .portugues {
-    background: linear-gradient(to right, rgb(24, 110, 16), rgb(228, 104, 104));
+    background: linear-gradient(to right, rgb(31, 138, 22), rgb(228, 104, 104));
 }
 
 .card-curso-contenido {
