@@ -4,8 +4,22 @@
 {% block styles %} {% static 'css/cursos.css' %} {% endblock styles %}
 
 <!-- Contenido de esta pagina -->
+
+
 {% block main %}
 <h1 class="titulo-seccion-cursos">Oferta de cursos</h1>
+
+<div class="contenedor-barra-busqueda">
+    <form method="get">
+        <div id="custom-search-input">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Buscar curso..." name="buscar" value="{{request.GET.buscar}}">
+                <button type="submit" class="boton-buscar"><i class="fas fa-search lupa"></i>Buscar</button>
+            </div>
+        </div>
+    </form>
+</div>
+
 <section class="oferta-cursos">
     {% if cursos %} {% for curso in cursos %}
 

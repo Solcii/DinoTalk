@@ -9,14 +9,18 @@
 
 .oferta-cursos {
     display: flex;
-    justify-content: justify-content;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .card-wrap {
-    margin: 1rem;
+    margin: 2rem;
     -webkit-perspective: 800;
     perspective: 800;
     width: 20%;
+    min-width: 20%;
+    max-width: 20%;
 }
 
 .card-curso {
@@ -126,4 +130,52 @@
 
 .incripciones-cerradas {
     color: #E80000;
+}
+
+.input-group {
+    width: 90%;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-control {
+    font-size: 1.8rem;
+    width: 85%;
+    height: 100%;
+    border: 0.3rem solid rgb(180, 180, 180);
+    border-radius: 5rem 0 0 5rem;
+    padding: 1.5rem;
+}
+
+.lupa {
+    margin-right: 0.5rem;
+}
+
+.boton-buscar {
+    background: rgb(180, 180, 180);
+    height: 100%;
+    width: 5%;
+    border: none;
+    border-radius: 0 5rem 5rem 0;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .card-wrap {
+        min-width: 40%;
+        max-width: 40%;
+    }
+}
+
+@media (max-width: 576px) {
+    .card-wrap {
+        min-width: 90%;
+        max-width: 90%;
+    }
+    .titulo-seccion-cursos {
+        font-size: 2.5rem;
+    }
 }
