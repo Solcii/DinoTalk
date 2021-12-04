@@ -54,8 +54,23 @@
 
 .card-curso-header {
     height: 7rem;
-    background: linear-gradient(to right, rgb(85, 85, 228), white, rgb(228, 104, 104));
     border-radius: 1rem 1rem 0 0;
+}
+
+.ingles {
+    background: linear-gradient(to top, rgb(85, 85, 228), #fff, rgb(228, 104, 104), #fff, rgb(85, 85, 228));
+}
+
+.aleman {
+    background: linear-gradient(to top, #000, rgb(228, 104, 104), rgb(228, 218, 85));
+}
+
+.frances {
+    background: linear-gradient(to right, rgb(85, 85, 228), #fff, rgb(228, 104, 104));
+}
+
+.portugues {
+    background: linear-gradient(to right, rgb(24, 110, 16), rgb(228, 104, 104));
 }
 
 .card-curso-contenido {
@@ -99,4 +114,16 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+
+.no-cursos {
+    margin: 3rem;
+}
+
+.inscripciones-abiertas {
+    color: #9CC254;
+}
+
+.incripciones-cerradas {
+    color: #E80000;
 }

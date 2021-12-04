@@ -7,31 +7,53 @@
 {% block main %}
 <h1 class="titulo-seccion-cursos">Oferta de cursos</h1>
 <section class="oferta-cursos">
+    {% if cursos %} {% for curso in cursos %}
+
     <div class="card-wrap">
         <div class="card-curso">
             <div class="card-front">
-                <div class="card-curso-header">
-                </div>
+                {% if curso.idioma == 'I' %}
+                <div class="card-curso-header ingles"></div>
+                {% elif curso.idioma == 'A' %}
+                <div class="card-curso-header aleman"></div>
+                {% elif curso.idioma == 'F' %}
+                <div class="card-curso-header frances"></div>
+                {% else %}
+                <div class="card-curso-header portugues"></div>
+                {% endif %}
                 <div class="card-curso-contenido">
-                    <h2 class="titulo-curso">Taller de conversacion</h2>
-                    <h3 class="idioma">Frances intermedio</h3>
+                    <h2 class="titulo-curso">{{ curso.titulo }}</h2>
+                    <h3 class="idioma">{{ curso.get_idioma_display }} {{ curso.get_nivel_display }} </h3>
                     <div class="footer-card-curso">
                         <div class="modalidad">
-                            <i class="fas fa-desktop modalidad-icono"></i>
-                            <h2 class="modalidad-titulo">Virtual</h2>
+                            {% if curso.modalidad == 'V' %}
+                            <i class="fas fa-desktop modalidad-icono"></i> {% else %}
+                            <i class="fas fa-user-friends modalidad-icono"></i> {% endif %}
+                            <h2 class="modalidad-titulo">{{ curso.get_modalidad_display }}</h2>
                         </div>
                         <div class="duracion">
-                            <i class="far fa-calendar-alt duracion-icono"></i>
-                            <h2 class="duracion-titulo">20 dias</h2>
+                            <i class="far fa-calendar-alt duracion-icono"></i> {% if curso.duracion == 1 %}
+                            <h2 class="duracion-titulo">{{ curso.duracion }} dia</h2>
+                            {% else %}
+                            <h2 class="duracion-titulo">{{ curso.duracion }} dias</h2>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
             </div>
             <div class="card-back">
-                <h2 class="inscripciones">Incripciones abiertas</h2>
+                {% if curso.inscripciones_abiertas %}
+                <h2 class="inscripciones incripciones-abiertas">Incripciones abiertas</h2>
+                {% else %}
+                <h2 class="inscripciones incripciones-cerradas">Incripciones cerradas</h2>
+                {% endif %}
             </div>
         </div>
     </div>
+    {% endfor %} {% else %}
+    <h2 class="no-cursos">Lo sentimos, no tenemos cursos para mostrar en este momento...</h2>
+
+    {% endif %}
 </section>
 
 {% endblock main %}
