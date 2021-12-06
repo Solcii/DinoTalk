@@ -83,7 +83,7 @@
 
 .titulo-curso,
 .inscripciones {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
 }
 
 .idioma {
@@ -133,7 +133,7 @@
 }
 
 .input-group {
-    width: 90%;
+    width: 100%;
     height: 4rem;
     display: flex;
     justify-content: center;
@@ -142,7 +142,7 @@
 
 .form-control {
     font-size: 1.8rem;
-    width: 85%;
+    width: 80%;
     height: 100%;
     border: 0.3rem solid rgb(180, 180, 180);
     border-radius: 5rem 0 0 5rem;
@@ -156,7 +156,7 @@
 .boton-buscar {
     background: rgb(180, 180, 180);
     height: 100%;
-    width: 5%;
+    width: 10%;
     border: none;
     border-radius: 0 5rem 5rem 0;
     font-size: 1.5rem;
