@@ -19,8 +19,10 @@
         </div>
     </form>
     <div class="filtros">
+        <i class="fas fa-filter icono-filtros"></i>
+        <h2 class="titulo-filtros">Filtrar por</h2>
         <form method="get">
-            <label for="idioma">Idioma</label>
+            <label for="idioma">Idioma:</label>
             <select name="idioma" id="idioma">
                 <option>Seleccionar...</option>
                 <option value="I">Inglés</option>
@@ -28,14 +30,14 @@
                 <option value="F">Francés</option>
                 <option value="P">Portugués</option>
             </select>
-            <label for="nivel">Nivel</label>
+            <label for="nivel">Nivel:</label>
             <select name="nivel" id="nivel">
                 <option>Seleccionar...</option>
                 <option value="P">Principiante</option>
                 <option value="I">Intermedio</option>
                 <option value="A">Avanzado</option>
             </select>
-            <button type="submit">Aplicar filtros</button>
+            <button type="submit" class="boton-filtros">Aplicar filtros</button>
         </form>
     </div>
 </div>

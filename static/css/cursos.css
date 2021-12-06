@@ -163,6 +163,35 @@
     cursor: pointer;
 }
 
+.filtros {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+}
+
+.filtros label,
+.filtros select {
+    margin: 0 0.5rem;
+    font-size: 1.5rem;
+}
+
+.titulo-filtros,
+.icono-filtros {
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+
+.boton-filtros {
+    font-size: 1.6rem;
+    padding: 0 2rem;
+    margin-left: 2rem;
+    border-radius: 0.5rem;
+    border: 0.5rem solid #9CC254;
+    background: #9CC254;
+    color: #000;
+}
+
 @media (max-width: 768px) {
     .card-wrap {
         min-width: 40%;
