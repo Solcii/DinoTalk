@@ -189,6 +189,10 @@ footer {
     transition: .5s;
 }
 
+main {
+    min-height: calc(100vh - 33.9rem);
+}
+
 @media (max-width: 768px) {
     .nav-menu {
         flex-direction: column;
