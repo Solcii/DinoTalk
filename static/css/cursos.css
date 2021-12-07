@@ -19,7 +19,7 @@
     -webkit-perspective: 800;
     perspective: 800;
     width: 20%;
-    min-width: 20%;
+    min-width: 33rem;
     max-width: 20%;
 }
 
@@ -109,7 +109,7 @@
 
 .modalidad-icono,
 .duracion-icono {
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-right: 1.5rem;
     color: #575353
 }
@@ -170,6 +170,12 @@
     margin: 2rem;
 }
 
+.filtros-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .filtros label,
 .filtros select {
     margin: 0 0.5rem;
@@ -194,17 +200,39 @@
 
 @media (max-width: 768px) {
     .card-wrap {
-        min-width: 40%;
         max-width: 40%;
+    }
+    .texto-buscar {
+        display: none;
+    }
+    .filtros,
+    .filtros-form {
+        flex-direction: column;
+    }
+    .filtros-form .selectores {
+        margin: 0.7rem;
     }
 }
 
 @media (max-width: 576px) {
     .card-wrap {
-        min-width: 90%;
+        min-width: 30rem;
         max-width: 90%;
     }
     .titulo-seccion-cursos {
         font-size: 2.5rem;
+    }
+    .titulo-curso,
+    .inscripciones {
+        font-size: 2.2rem;
+    }
+    .idioma {
+        font-size: 1.7rem;
+    }
+    .modalidad-titulo,
+    .duracion-titulo,
+    .modalidad-icono,
+    .duracion-icono {
+        font-size: 1.7rem;
     }
 }

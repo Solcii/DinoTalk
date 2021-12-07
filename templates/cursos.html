@@ -14,29 +14,33 @@
         <div id="custom-search-input">
             <div class="input-group">
                 <input type="text" class="form-control" placeholder="Buscar curso..." name="buscar" value="{{request.GET.buscar}}">
-                <button type="submit" class="boton-buscar"><i class="fas fa-search lupa"></i>Buscar</button>
+                <button type="submit" class="boton-buscar"><i class="fas fa-search lupa"></i><span class="texto-buscar">Buscar</span></button>
             </div>
         </div>
     </form>
     <div class="filtros">
         <i class="fas fa-filter icono-filtros"></i>
         <h2 class="titulo-filtros">Filtrar por</h2>
-        <form method="get">
-            <label for="idioma">Idioma:</label>
-            <select name="idioma" id="idioma">
+        <form class="filtros-form" method="get">
+            <div class="selectores">
+                <label for="idioma">Idioma:</label>
+                <select name="idioma" id="idioma">
                 <option>Seleccionar...</option>
                 <option value="I">Inglés</option>
                 <option value="A">Alemán</option>
                 <option value="F">Francés</option>
                 <option value="P">Portugués</option>
             </select>
-            <label for="nivel">Nivel:</label>
-            <select name="nivel" id="nivel">
+            </div>
+            <div class="selectores">
+                <label for="nivel">Nivel:</label>
+                <select name="nivel" id="nivel">
                 <option>Seleccionar...</option>
                 <option value="P">Principiante</option>
                 <option value="I">Intermedio</option>
                 <option value="A">Avanzado</option>
             </select>
+            </div>
             <button type="submit" class="boton-filtros">Aplicar filtros</button>
         </form>
     </div>
