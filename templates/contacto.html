@@ -1,13 +1,48 @@
-{% extends 'base.html' %}{% block main %}
+{% extends 'base.html' %} {% load static %}
 
-<h1>Contáctenos</h1>
-{% if form.errors %}
-<p class="mensaje-error">Por favor revisa este campo</p>
-{% endif %}
-<form action="" method="POST" class="formulario-conctacto">{% csrf_token %}
-    <div class="contenedor-campos-formulario">
-        {{ form.as_p }}
-    </div>
-    <input type="submit" value="Enviar">
-</form>
+<!-- Hoja de estilos de esta pagina -->
+{% block styles %} {% static 'css/contacto.css' %} {% endblock styles %}
+
+<!-- Contenido de esta pagina -->
+{% block main %}
+<div class="contenedor-form-datos">
+    <section class="contenedor-formulario">
+        <h1 class="titulo-contacto">Formulario de contacto</h1>
+        {% if form.errors %}
+        <p class="mensaje-error">Por favor revisa este campo</p>
+        {% endif %}
+        <form action="" method="POST" class="formulario-contacto">{% csrf_token %}
+            <div class="contenedor-campos-formulario">
+                {{ form.as_p }}
+            </div>
+            <input type="submit" value="Enviar" class="boton-formulario">
+        </form>
+    </section>
+    <section class="contenedor-datos-contacto">
+        <div class="datos-generales">
+            <div class="datos-contacto">
+                <i class="fas fa-envelope icono-contacto"></i>
+                <p class="informacion-contacto">dinotalk@gmail.com</p>
+            </div>
+            <div class="datos-contacto">
+                <i class="fas fa-phone icono-contacto"></i>
+                <p>+54 9 11 5555 5555</p>
+            </div>
+            <p class="informacion-contacto frase-contacto">Seguinos en redes sociales para descubrir más sobre los cursos y conocer las novedades:</p>
+            <div class="datos-contacto">
+                <i class="fab fa-instagram icono-contacto"></i>
+                <p class="informacion-contacto">@dinotalk_ok</p>
+            </div>
+            <div class="datos-contacto">
+                <i class="fab fa-facebook icono-contacto"></i>
+                <p class="informacion-contacto">DinoTalk Escuela de Idiomas (@dinotalk.idomas)</p>
+            </div>
+        </div>
+    </section>
+</div>
+<section class="direccion">
+    <p class="informacion-contacto frase-direccion">Encontranos en Sarmiento 1759, CABA</p>
+    <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.946964785964!2d-58.39379498477023!3d-34.605502580459046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccac3d4cec7e9%3A0x2df842ef71ea062a!2sSarmiento%201759%2C%20C1042%20ABG%2C%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1638977052732!5m2!1ses!2sar"
+        width="1200" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</section>
 {% endblock main %}
