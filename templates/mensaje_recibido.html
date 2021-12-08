@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -5,11 +7,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mensaje recibido</title>
+    <meta name="theme-color" content="#9CC254">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,600;1,200;1,300&family=Mulish:ital,wght@0,200;0,300;1,200;1,300;1,600&family=Titillium+Web:ital,wght@0,200;0,300;0,600;1,200;1,300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0cebf067a0.js" crossorigin="anonymous"></script>
+    <title>DinoTalk!</title>
+    <link rel="shortcut icon" href="{% static 'images/dinotalk-icon.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/mensaje_recibido.css' %}">
 </head>
 
 <body>
-    <h1>Mensaje recibido</h1>
+    <div class="cuadro-mensaje">
+        <img class="logo" src="{% static 'images/dinotalk.png' %}" alt="logo-dinotalk">
+        <h1>Hemos recibido su mensaje correctamente <br> ¡en breve nos estaremos poniendo en contacto contigo!</h1>
+        <a href="{% url 'cursos:index' %}">Volver al sitio</a>
 </body>
+</div>
 
 </html>
