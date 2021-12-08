@@ -1,3 +1,13 @@
 {% extends 'base.html' %}{% block main %}
-<p>Esto es en contacto</p>
+
+<h1>Contáctenos</h1>
+{% if form.errors %}
+<p class="mensaje-error">Por favor revisa este campo</p>
+{% endif %}
+<form action="" method="POST" class="formulario-conctacto">{% csrf_token %}
+    <div class="contenedor-campos-formulario">
+        {{ form.as_p }}
+    </div>
+    <input type="submit" value="Enviar">
+</form>
 {% endblock main %}

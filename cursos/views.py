@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.template import loader
-from .models import Curso
+
+from cursos.forms import FormularioContacto
+from .models import Contacto, Curso
 from django.db.models import Q, query
 
 def home(request):
@@ -24,4 +26,19 @@ def cursos(request):
     return render(request, 'cursos.html', {'cursos': cursos} )
 
 def contacto(request):
-    return render(request, 'contacto.html')
+    if request.method == 'POST':
+        formulario_contacto = FormularioContacto(request.POST)
+        if formulario_contacto.is_valid():
+            info_formulario = formulario_contacto.cleaned_data
+            datos_contacto = Contacto()
+
+            datos_contacto.asunto = info_formulario['asunto']
+            datos_contacto.nombre = info_formulario['nombre']
+            datos_contacto.email = info_formulario['email']
+            datos_contacto.mensaje = info_formulario['mensaje']
+            datos_contacto.save()
+
+            return render(request, 'mensaje_recibido.html', {'respuestasFormulario': info_formulario})
+    else:
+        formulario_contacto = FormularioContacto()
+        return render(request, 'contacto.html', {'form': formulario_contacto})
