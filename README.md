@@ -15,13 +15,13 @@ Además, cuenta con un Admin desde donde gestionar fácilmente la información p
 ## Lenguajes y herramientas
 
 Este proyecto está desarrollado con las siguientes tecnologías y herramientas de desarrollo:
-![py-logo](https://img.icons8.com/color/25/000000/python--v2.png) Python
-![django-logo](https://img.icons8.com/external-tal-revivo-color-tal-revivo/25/000000/external-django-a-high-level-python-web-framework-that-encourages-rapid-development-logo-color-tal-revivo.png) Django
-![db-logo](https://img.icons8.com/color/25/000000/postgreesql.png) PostgreSQL
-![html-logo](https://img.icons8.com/color/25/000000/html-5--v1.png) HTML5
-![css-logo](https://img.icons8.com/color/25/000000/css3.png) CSS3
-![js-logo](https://img.icons8.com/color/25/000000/javascript--v1.png) JavaScript
-![git-logo](https://img.icons8.com/color/25/000000/git.png) Control de versiones con GIT
+- ![py-logo](https://img.icons8.com/color/25/000000/python--v2.png) Python
+- ![django-logo](https://img.icons8.com/external-tal-revivo-color-tal-revivo/25/000000/external-django-a-high-level-python-web-framework-that-encourages-rapid-development-logo-color-tal-revivo.png) Django
+- ![db-logo](https://img.icons8.com/color/25/000000/postgreesql.png) PostgreSQL
+- ![html-logo](https://img.icons8.com/color/25/000000/html-5--v1.png) HTML5
+- ![css-logo](https://img.icons8.com/color/25/000000/css3.png) CSS3
+- ![js-logo](https://img.icons8.com/color/25/000000/javascript--v1.png) JavaScript
+- ![git-logo](https://img.icons8.com/color/25/000000/git.png) Control de versiones con GIT
 
 
 **Cualquier consulta, comentario o sugerencia no dudes en contactarte conmigo**
