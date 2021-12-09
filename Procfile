@@ -1,0 +1,1 @@
+web: gunicorn instituto_idiomas.wsgi --log-file -
