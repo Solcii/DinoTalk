@@ -2,18 +2,23 @@ from django.shortcuts import render
 from django.template import loader
 
 from cursos.forms import FormularioContacto
-from .models import Contacto, Curso
+from .models import Contacto, Curso, Profesor
 from django.db.models import Q, query
+
 
 def home(request):
     return render(request, 'index.html')
 
+
 def cursos(request):
     cursos = Curso.objects.all()
 
+    print(Profesor.objects.all())
+
     queryset = request.GET.get('buscar')
+
     if queryset:
-        cursos = Curso.objects.filter(Q(titulo__icontains = queryset))
+        cursos = Curso.objects.filter(Q(titulo__icontains=queryset))
 
     idioma_seleccionado = request.GET.get('idioma')
     if idioma_seleccionado and idioma_seleccionado != 'Seleccionar...':
@@ -23,7 +28,10 @@ def cursos(request):
     if nivel_seleccionado and nivel_seleccionado != 'Seleccionar...':
         cursos = cursos.filter(nivel=nivel_seleccionado)
 
-    return render(request, 'cursos.html', {'cursos': cursos} )
+    print(cursos)
+
+    return render(request, 'cursos.html', {'cursos': cursos})
+
 
 def contacto(request):
     if request.method == 'POST':

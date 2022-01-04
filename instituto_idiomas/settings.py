@@ -10,10 +10,10 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
+import dj_database_url
 import os
 from pathlib import Path
 from decouple import config
-from dj_database_url import parse as db_url
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -80,32 +80,38 @@ WSGI_APPLICATION = 'instituto_idiomas.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-""" DATABASES = {
+"""DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'instituto_idiomas',
         'USER': 'postgres',
         'PASSWORD': '301013',
     }
-} """
+}
+"""
 
-
-""" import dj_database_url
-from decouple import config
-
-DATABASES = {
+"""DATABASES = {
     'default': dj_database_url.config(
         default=config('DATABASE_URL')
     )
-} """
+}"""
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd1mgld5dpaprkc',
+        'USER': 'gnaobhzakrfgdp',
+        'PASSWORD': '6e718a95b350f3266c529db9057b60dd9ac7c5d3791940b073549be81b7c255b',
+        'HOST': 'ec2-3-230-219-251.compute-1.amazonaws.com',
+        'PORT': '5432'
+    }
+}
 """ DATABASES = {
     'default': config(
         'DATABASE_URL',
         cast=db_url
     )
 } """
-
 
 
 # Password validation
@@ -144,11 +150,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR,'static'),
+    os.path.join(BASE_DIR, 'staticfiles'),
 )
 
 # Default primary key field type
@@ -156,4 +162,4 @@ STATICFILES_DIRS = (
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+#STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
